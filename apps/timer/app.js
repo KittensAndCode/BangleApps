@@ -26,10 +26,15 @@ function countDown() {
   Bangle.setLCDPower(1);
 }
 
+// function like an app
 Bangle.setUI({
   mode : "custom",
   back : function() {load();}
 });
+
+// draw and load widgets
+Bangle.loadWidgets();
+Bangle.drawWidgets();
 
 // call countDown every second
 counterInterval = setInterval(countDown, 1000);
