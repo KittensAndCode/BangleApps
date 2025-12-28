@@ -26,9 +26,10 @@ function countDown() {
   Bangle.setLCDPower(1);
 }
 
-setWatch(() => {
-  Bangle.showLauncher();
-}, BTN1, {repeat:true, edge:"falling"})
+Bangle.setUI({
+  mode : "custom",
+  back : function() {load();}
+});
 
 // call countDown every second
 counterInterval = setInterval(countDown, 1000);
