@@ -1,6 +1,8 @@
 E.showMessage("My App");
 
 var counter = 30;
+g.setFontAlign(0,0);
+g.setFont("6x8:8");
 
 function countDown() {
   counter--;
