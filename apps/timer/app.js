@@ -13,7 +13,7 @@ function countDown() {
     // Now buzz
     Bangle.buzz();
     // again, every 5 seconds
-    counterInterval = setInterval(() => Bangle.buzz(), 5000);
+    counterInterval = setInterval(() => Bangle.buzz(), 1000);
     return;
   }
 
@@ -26,5 +26,7 @@ function countDown() {
   Bangle.setLCDPower(1);
 }
 
+Bangle.loadWidgets();
+Bangle.drawWidgets();
 // call countDown every second
 counterInterval = setInterval(countDown, 1000);
