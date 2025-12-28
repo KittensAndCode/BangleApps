@@ -18,6 +18,9 @@ function countDown() {
   }
 
   g.clear(1); // clear screen and reset graphics state
+  // draw and load widgets
+  Bangle.loadWidgets();
+  Bangle.drawWidgets()
   g.setFontAlign(0,0); // center font
   g.setFont("Vector",80); // vector font, 80px
   // draw the current counter value
